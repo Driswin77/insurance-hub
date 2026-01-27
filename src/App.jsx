@@ -101,7 +101,6 @@ const ServiceDetails = ({ type }) => {
 
     // Construct the WhatsApp Message
     const message = 
-      `*New Inquiry from Website* 📋\n\n` +
       `*Service:* ${data.title}\n` +
       `*Plan Interest:* ${selectedPlan.name}\n` +
       `------------------\n` +
