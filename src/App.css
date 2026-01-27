@@ -1,0 +1,516 @@
+/* --- FULL WIDTH FIX --- */
+html, body, #root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.App {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa; /* Very light grey/white */
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d6e0eb; /* White Navbar */
+  padding: 0.8rem 2rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Soft shadow */
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  height: 65px; /* Slightly larger */
+  width: auto;
+}
+
+.nav-brand h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  color: #003399; /* Royal Blue Text */
+  font-weight: 800;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333; /* Dark text for links */
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #003399; /* Blue on hover */
+}
+
+/* Call Button - Using the Card's Accent or Standard Orange for visibility */
+.call-btn {
+  background-color: #003399; /* Royal Blue */
+  padding: 10px 20px;
+  border-radius: 30px; /* Pill shape like modern apps */
+  color: white !important;
+  font-weight: bold !important;
+  box-shadow: 0 4px 10px rgba(0, 51, 153, 0.3);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #003399;
+}
+
+/* Hero Section - The Big Blue Header */
+.hero-section {
+  /* Gradient matching the blue waves on the card */
+  background: linear-gradient(135deg, #91a7d1 0%, #0055cc 100%);
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+/* Optional: Adding a curve at bottom of hero */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #f8f9fa;
+  
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.hero-content .tagline {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background-color: white;
+  color: #003399;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.primary-btn:hover {
+  transform: scale(1.05);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Services */
+.services-section {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.section-sub {
+  margin-bottom: 1rem;
+  color: #000000;
+  font-size: 1.1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-card {
+  background: rgb(255, 255, 255);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  border-top: 5px solid #003399; /* Blue accent on top */
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #003399;
+}
+
+/* Partners Section */
+.partners-section {
+  
+  padding: 5rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.partners-section h2 {
+  margin-bottom: 0.5rem;
+  color: #000000d4;
+  font-size: 1.6rem;
+}
+
+.partners-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 3rem;
+}
+
+.partner-card {
+  background: rgb(255, 255, 255);
+  padding: 1.5rem;
+  border-radius: 12px;
+  min-width: 200px;
+  max-width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #eee;
+  border-top: 5px solid #003399;
+}
+
+.partner-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.partner-card h3 {
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+/* Info Section */
+.info-section {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  background-color: #eef2f8; /* Light blue tint */
+  
+}
+
+.rating-box, .hours-box {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-top: 5px solid #003399;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 5rem 2rem;
+  width: 100%;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: linear-gradient(135deg, #91a7d1 0%, #0055cc 100%);
+  font-size: 2.3rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.address-details {
+  flex: 1;
+  min-width: 200px;
+  padding: 30px;
+  background:linear-gradient(135deg, #91a7d1 0%, #0055cc 100%);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 51, 153, 0.2);
+}
+
+.address-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  padding-bottom: 15px;
+}
+
+.address-details a {
+  color: white;
+  text-decoration: underline;
+}
+
+.map-placeholder {
+  flex: 1.5; /* Map takes slightly more space */
+  min-width: 300px;
+  height: 400px;
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.map-placeholder iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #888;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* --- START OF DETAILS PAGE STYLES --- */
+
+.service-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.details-page {
+  padding-top: 0;
+  background-color: #f8f9fa;
+  min-height: 80vh;
+}
+
+/* UPDATED: Details Header with Gradient, Texture & Greeting Support */
+.details-header {
+  /* 1. Deep Navy Gradient Background */
+  background-color: #001f5c;
+  background-image: 
+    /* 2. Subtle White Circles (Texture) */
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 200px),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 200px),
+    /* Base Gradient */
+    linear-gradient(135deg, #001f5c 0%, #003399 100%);
+    
+  color: white;
+  padding: 40px 20px 80px 20px; /* Top padding 40px, Bottom 80px for overlap */
+  text-align: center;
+  position: relative;
+  
+  /* Curved Bottom */
+  border-bottom-left-radius: 50% 20px;
+  border-bottom-right-radius: 50% 20px;
+  
+  margin-bottom: 30px;
+  overflow: hidden; /* Ensures the pattern doesn't spill out */
+}
+
+/* Style for the Greeting Text (h2) */
+.details-header h2 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Style for the Sub-text (p) */
+.details-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.plans-container {
+  max-width: 800px;
+  margin: -60px auto 40px; /* Pulls cards up */
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.plans-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003399;
+}
+
+.plans-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.plan-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-left: 6px solid #003399;
+}
+
+.inquire-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #003399;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.inquire-btn:hover {
+  background-color: #002266;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+  }
+}
