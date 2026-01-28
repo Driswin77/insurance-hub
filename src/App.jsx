@@ -272,7 +272,7 @@ const Home = () => {
           <h3>Nandakumar TK</h3>
           <p><strong>Insurance Advisor</strong></p>
           <div className="stars">⭐⭐⭐⭐⭐</div>
-          <p>Trusted by hundreds of families in Edappal for over 20 years.</p>
+          <p>Trusted by hundreds of families for over 20 years.</p>
         </div>
       </section>
 
