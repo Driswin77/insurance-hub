@@ -258,7 +258,7 @@ const Home = () => {
             <img src={starLogo} alt="Star Health" className="partner-logo" />
             <h3>Star Health</h3>
           </div>
-          
+
           <div className="partner-card">
             <img src={unitedLogo} alt="United India" className="partner-logo" />
             <h3>United India</h3>
@@ -366,7 +366,7 @@ function App() {
       </Routes>
 
       <footer>
-        <p>© 2026 Insurance Hub Edappal. All rights reserved.</p>
+        <p>© 2026 Insurance Hub. All rights reserved.</p>
       </footer>
     </div>
   );
