@@ -218,6 +218,15 @@ const Home = () => {
         <h2>Our Services</h2>
         <p className="section-sub">Comprehensive protection for what matters most</p>
         <div className="services-grid">
+
+           <Link to="/life-insurance" className="service-card-link">
+            <div className="service-card">
+              <div className="icon"><FavoriteIcon fontSize="inherit"/></div>
+              <h3>Life Insurance</h3>
+              <p>Term Plans, Savings & Pension.</p>
+            </div>
+          </Link>
+          
           <Link to="/vehicle-insurance" className="service-card-link">
             <div className="service-card">
               <div className="icon"><DirectionsCarIcon fontSize="inherit"/></div>
@@ -234,13 +243,6 @@ const Home = () => {
             </div>
           </Link>
 
-          <Link to="/life-insurance" className="service-card-link">
-            <div className="service-card">
-              <div className="icon"><FavoriteIcon fontSize="inherit"/></div>
-              <h3>Life Insurance</h3>
-              <p>Term Plans, Savings & Pension.</p>
-            </div>
-          </Link>
         </div>
       </section>
 
@@ -256,10 +258,7 @@ const Home = () => {
             <img src={starLogo} alt="Star Health" className="partner-logo" />
             <h3>Star Health</h3>
           </div>
-          <div className="partner-card">
-            <img src={newIndiaLogo} alt="New India Assurance" className="partner-logo" />
-            <h3>New India</h3>
-          </div>
+          
           <div className="partner-card">
             <img src={unitedLogo} alt="United India" className="partner-logo" />
             <h3>United India</h3>
