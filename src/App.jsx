@@ -287,7 +287,7 @@ const Home = () => {
             <strong>Address:</strong><br/>
             Near Panchayath Office<br/>
             Parappuram, Kadanchery<br/>
-            Edappal, Kerala</p>
+            Edappal,Malappuram dist, Kerala</p>
             
             <br />
             
