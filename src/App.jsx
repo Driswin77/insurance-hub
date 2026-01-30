@@ -155,7 +155,7 @@ const ServiceDetails = ({ type }) => {
         </DialogTitle>
         <DialogContent sx={{ paddingTop: '20px !important' }}>
           <DialogContentText>
-            Please enter your details. We will send this inquiry directly to our WhatsApp agent.
+            Please enter your details. We will send this inquiry directly to Insurance Advisor.
           </DialogContentText>
           <TextField
             autoFocus
