@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Analytics } from "@vercel/analytics/next"
+
 
 // --- NEW IMPORTS FOR POPUP ---
 import { 
