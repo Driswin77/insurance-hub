@@ -184,7 +184,7 @@ const ServiceDetails = ({ type }) => {
               className="inquire-btn" 
               onClick={() => handleInquireClick(plan, data.title)}
             >
-              Inquire Now
+              Enquire Now
             </button>
           </div>
         ))}
@@ -229,7 +229,7 @@ const ServiceDetails = ({ type }) => {
                 <h4>{plan.name} <span style={{ fontSize: '0.9rem', color: '#555' }}>(Plan No: {plan.planNo})</span></h4>
                 <p><strong>Age Range:</strong> {plan.ageRange}</p>
                 <button className="inquire-btn" onClick={() => handleInquireClick(plan, selectedCategory)}>
-                  Inquire Now
+                  Enquire Now
                 </button>
               </div>
             ))}
