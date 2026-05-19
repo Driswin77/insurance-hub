@@ -111,7 +111,7 @@ const ServiceDetails = ({ type }) => {
       icon: <HealthAndSafetyIcon style={{ fontSize: 60, color: 'white' }} />,
       desc: "Protect your family's health with cashless treatment at top hospitals.",
       plans: [
-        { name: "Star Health Optima", details: "The most popular family floater plan with recharge benefits." },
+        { name: "Star Health Assure", details: "The most popular family floater plan with recharge benefits." },
         { name: "Senior Citizen Red Carpet", details: "Special coverage for those aged 60+ without pre-medical screening." },
         { name: "Critical Illness Cover", details: "Lump sum payout for major illnesses like cancer or heart attack." }
       ]
@@ -325,6 +325,8 @@ const Home = () => {
               <div className="icon"><FamilyRestroomIcon fontSize="inherit"/></div> {/* Updated icon */}
               <h3>Life Insurance</h3>
               <p>Term Plans, Savings & Pension.</p>
+              &nbsp;
+              <p style={{ fontWeight: 'bold' }}>Click to view plans</p>
             </div>
           </Link>
           
@@ -333,6 +335,8 @@ const Home = () => {
               <div className="icon"><DirectionsCarIcon fontSize="inherit"/></div>
               <h3>Vehicle Insurance</h3>
               <p>Car, Bike, and Commercial Vehicles.</p>
+              &nbsp;
+              <p style={{ fontWeight: 'bold' }}>Click to view plans</p>
             </div>
           </Link>
 
@@ -341,6 +345,8 @@ const Home = () => {
               <div className="icon"><HealthAndSafetyIcon fontSize="inherit"/></div>
               <h3>Health Insurance</h3>
               <p>Family Health & Critical Illness Covers.</p>
+              &nbsp;
+              <p style={{ fontWeight: 'bold' }}>Click to view plans</p>
             </div>
           </Link>
         </div>
