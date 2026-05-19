@@ -253,7 +253,7 @@ const ServiceDetails = ({ type }) => {
       {/* --- POPUP DIALOG --- */}
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle sx={{ backgroundColor: '#003399', color: 'white' }}>
-          Inquire: {selectedPlan?.name}
+          Enquire: {selectedPlan?.name}
         </DialogTitle>
         <DialogContent sx={{ paddingTop: '20px !important' }}>
           <DialogContentText>
