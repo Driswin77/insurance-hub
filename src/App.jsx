@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react'; // Added Vercel Analytics
 
 // --- NEW IMPORTS FOR POPUP ---
 import { 
@@ -23,7 +24,7 @@ import unitedLogo from './united.png';
 // --- ICONS ---
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
-import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom'; // Replaced FavoriteIcon
+import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -31,7 +32,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 // ==========================================
-// 1. SERVICE DETAILS PAGE (LIFE INSURANCE MATCHES VEHICLE/HEALTH STYLE)
+// 1. SERVICE DETAILS PAGE
 // ==========================================
 const ServiceDetails = ({ type }) => {
   // --- STATE FOR POPUP ---
@@ -118,7 +119,7 @@ const ServiceDetails = ({ type }) => {
     },
     life: {
       title: "Life Insurance",
-      icon: <FamilyRestroomIcon style={{ fontSize: 60, color: 'white' }} />, // Updated icon
+      icon: <FamilyRestroomIcon style={{ fontSize: 60, color: 'white' }} />,
       desc: "Secure your family's financial future with the trust of LIC. Choose from a wide range of plans categorized by your needs.",
       categories: lifeCategories
     }
@@ -170,7 +171,7 @@ const ServiceDetails = ({ type }) => {
     handleClose();
   };
 
-  // Render for vehicle/health (simple list) - same style as life will use
+  // Render for vehicle/health (simple list)
   const renderSimplePlans = () => (
     <div className="plans-container">
       <br /><br />
@@ -195,7 +196,6 @@ const ServiceDetails = ({ type }) => {
   // Render for life insurance using the same card style
   const renderLifeInsurance = () => {
     if (!selectedCategory) {
-      // Show category buttons styled like service cards
       return (
         <div className="plans-container">
           <br /><br />
@@ -203,7 +203,7 @@ const ServiceDetails = ({ type }) => {
           <div className="services-grid" style={{ marginTop: '2rem' }}>
             {Object.keys(data.categories).map(cat => (
               <div key={cat} className="service-card" style={{ cursor: 'pointer' }} onClick={() => setSelectedCategory(cat)}>
-                <div className="icon"><FamilyRestroomIcon fontSize="inherit" /></div> {/* Updated icon */}
+                <div className="icon"><FamilyRestroomIcon fontSize="inherit" /></div>
                 <h3>{cat}</h3>
                 <p>Click to view plans</p>
               </div>
@@ -212,7 +212,6 @@ const ServiceDetails = ({ type }) => {
         </div>
       );
     } else {
-      // Show plans of selected category using same plan-card style as vehicle/health
       const plans = data.categories[selectedCategory];
       return (
         <div className="plans-container">
@@ -298,7 +297,7 @@ const ServiceDetails = ({ type }) => {
 };
 
 // ==========================================
-// 2. HOME PAGE (UPDATED WITH FamilyRestroomIcon)
+// 2. HOME PAGE
 // ==========================================
 const Home = () => {
   return (
@@ -322,7 +321,7 @@ const Home = () => {
         <div className="services-grid">
            <Link to="/life-insurance" className="service-card-link">
             <div className="service-card">
-              <div className="icon"><FamilyRestroomIcon fontSize="inherit"/></div> {/* Updated icon */}
+              <div className="icon"><FamilyRestroomIcon fontSize="inherit"/></div>
               <h3>Life Insurance</h3>
               <p>Term Plans, Savings & Pension.</p>
               &nbsp;
@@ -439,6 +438,7 @@ function App() {
 
   return (
     <div className="App">
+      <Analytics /> {/* Vercel Analytics added here */}
       <nav className="navbar">
         <div className="nav-brand">
           <img src={logo} alt="Insurance Hub Logo" className="logo-img" />
